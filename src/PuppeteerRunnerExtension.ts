@@ -129,8 +129,9 @@ export class PuppeteerRunnerExtension extends RunnerExtension {
           }
           startWaitingForEvents();
           await element.click({
-            clickCount: 2,
+            count: 2,
             button: step.button && mouseButtonMap.get(step.button),
+            delay: step.duration,
             offset: {
               x: step.offsetX,
               y: step.offsetY,

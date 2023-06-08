@@ -1,9 +1,9 @@
 exports['LighthouseStringifyExtension handles ending timespan 1'] = `
 const fs = require('fs');
-const puppeteer = require('puppeteer'); // v13.0.0 or later
+const puppeteer = require('puppeteer'); // v19.11.1 or later
 
 (async () => {
-  const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch({headless: 'new'});
   const page = await browser.newPage();
   const timeout = 5000;
   page.setDefaultTimeout(timeout);
@@ -61,10 +61,10 @@ const puppeteer = require('puppeteer'); // v13.0.0 or later
 
 exports['LighthouseStringifyExtension handles ending navigation 1'] = `
 const fs = require('fs');
-const puppeteer = require('puppeteer'); // v13.0.0 or later
+const puppeteer = require('puppeteer'); // v19.11.1 or later
 
 (async () => {
-  const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch({headless: 'new'});
   const page = await browser.newPage();
   const timeout = 5000;
   page.setDefaultTimeout(timeout);
@@ -133,10 +133,10 @@ exports[
   'LighthouseStringifyExtension handles multiple sequential navigations 1'
 ] = `
 const fs = require('fs');
-const puppeteer = require('puppeteer'); // v13.0.0 or later
+const puppeteer = require('puppeteer'); // v19.11.1 or later
 
 (async () => {
-  const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch({headless: 'new'});
   const page = await browser.newPage();
   const timeout = 5000;
   page.setDefaultTimeout(timeout);

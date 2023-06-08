@@ -2,10 +2,10 @@ exports[
   'Lighthouse user flow run via stringify produces a valid desktop flow report 1'
 ] = `
 const fs = require('fs');
-const puppeteer = require('puppeteer'); // v13.0.0 or later
+const puppeteer = require('puppeteer'); // v19.11.1 or later
 
 (async () => {
-  const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch({headless: 'new'});
   const page = await browser.newPage();
   const timeout = 5000;
   page.setDefaultTimeout(timeout);
